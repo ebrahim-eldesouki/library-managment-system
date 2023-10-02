@@ -1,0 +1,47 @@
+{%extends 'home.html'%}
+{%block tit%}
+borrow books
+{%endblock%}
+{%block content%}
+<section>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">name</th>
+        <th scope="col">id</th>
+        <th scope="col">num papers</th>
+        <th scope="col">type</th>
+        <th scope="col">deadline</th>
+        <th scope="col">std_id</th>
+      </tr>
+      {%for u in books%}
+    </thead>
+    <tr>
+      <td>
+          {{u.name}}
+      </td>
+      <td>
+          {{u.id}}
+      </td>
+      <td>
+          {{u.num_papers}}
+      </td>
+      <td>
+          {{u.type}}
+      </td>
+      <td>
+         {{u.deadline}}
+      </td>
+      <td>
+        {{u.std_id}}
+     </td>
+  </tr>
+ 
+{%endfor%}
+  </table>
+</section>         
+
+
+ <br>
+ <br>
+{%endblock%}

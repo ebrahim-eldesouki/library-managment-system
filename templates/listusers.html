@@ -1,0 +1,40 @@
+{%extends 'home.html'%}
+{%block tit%}
+list users
+{%endblock%}
+{%block content%}
+<section>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">username</th>
+      <th scope="col">action</th>
+      
+    </tr>
+  </thead>
+  {%for u in students%}
+  <tbody>
+    <tr>
+      <th scope="row">{{u.id}}</th>
+      <td>{{u.username}}</td>
+      <td>
+        <a href="{%url 'updatestd' u.id%}">Update</a>
+        <a href="{%url 'deletestd' u.id%}">Delete</a>
+        <a href="{%url 'infostd' u.id%}">view</a>
+      </td>
+   
+    </tr>
+  </tbody>
+  
+{%endfor%}
+</table>
+</section>
+ 
+<center><h2 class="collapse navbar-collapse"><a href="{%url 'addstd' %}" class="collapse navbar-collapse">ADD +</a></h2></CENTER>
+ <br>
+ <br>
+{%endblock%}
+
+
+

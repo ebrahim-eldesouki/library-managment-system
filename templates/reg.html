@@ -1,0 +1,55 @@
+{%extends 'home.html'%}
+{%block tit%}
+register
+{%endblock%}
+
+{%block content%}
+<center>
+<div class="container">
+      <div class="center">
+          <h1>Register</h1><br>
+          <form method="POST" >
+              {%csrf_token%}
+
+              <div class="txt_field">
+                <label>Name:</label> <input type="text" name="name"/>
+              </div>
+
+
+              <div class="txt_field">
+                  <label>Password:</label>  <input type="password" name="password"/>
+
+              </div>
+              <div class="txt_field">
+                  <label>age:</label>  <input type="number" name="age"/>
+
+              </div>
+              <div class="txt_field">
+                  <label>email:</label>  <input type="email" name="email"/>
+
+              </div>
+              <div class="txt_field">
+                  <label>gender:</label>  <input type="text" name="gender"/>
+
+              </div>
+
+              <div><br>
+              <input type="submit" value="register"><br><br>
+              </div>
+          </form>
+      </div>
+  </div>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+
+</center>
+
+{%endblock%}
+
+
+

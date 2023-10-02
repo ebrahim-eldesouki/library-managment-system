@@ -1,0 +1,52 @@
+{%extends 'home.html'%}
+{%block tit%}
+listbook
+{%endblock%}
+{%block content%}
+<section>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">name</th>
+        <th scope="col">id</th>
+        <th scope="col">num papers</th>
+        <th scope="col">type</th>
+        <th scope="col">action</th>
+      </tr>
+      {%for u in book%}
+    </thead>
+    <tr>
+      <td>
+          {{u.name}}
+      </td>
+      <td>
+          {{u.id}}
+      </td>
+      <td>
+          {{u.num_papers}}
+      </td>
+      <td>
+          {{u.type}}
+      </td>
+      <td>{%if request.session.isadmin%} 
+          <a href="{%url 'update' u.id%}">Update</a>
+          <a href="{%url 'delete' u.id%}">Delete</a>
+          {%endif%}
+          {%if  request.session.id  %}
+          <a href="{% url 'bookborrow' u.id%}">borrrow</a>
+          {%endif%}
+      </td>
+  </tr>
+ 
+{%endfor%}
+  </table>
+</section> 
+{%if request.session.isadmin%}         
+<center>
+  <a class="btn btn-primary" href="{%url 'listborrow' %}" role="button">listborrow</a>
+</center>
+<center><h2 class="collapse navbar-collapse"><a href="{%url 'addbook' %}" class="collapse navbar-collapse">ADD +</a></h2></CENTER>
+  {%endif%}
+ <br>
+ <br>
+{%endblock%}

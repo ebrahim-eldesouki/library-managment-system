@@ -1,0 +1,43 @@
+{%extends 'home.html'%}
+{%block tit%}
+profile
+{%endblock%}
+
+{%block content%}
+
+    <div class="card" >
+  <div class="media">
+      <img src="static/images/person.jpg" class="rounded-circle account-image mt-3" height="100" width="100" >
+      <div class="media-body">
+      
+          <table>
+          <h1 class="account-heading ml-5 mt-4"> User Name:  &nbsp;&nbsp;&nbsp;{{msg.username }}</h1>
+           <h1 class="text-secondary ml-5 mt-3"> id:&nbsp;&nbsp;&nbsp;       {{msg.id}}</h1>
+          <h1 class="text-secondary ml-5 mt-3"> E-mail:&nbsp;&nbsp;&nbsp; {{msg.email}}</h1>
+           <h1 class="text-secondary ml-5 mt-3"> age:&nbsp;&nbsp;&nbsp; {{msg.age}}</h1>
+           <h1 class="text-secondary ml-5 mt-3"> gender:&nbsp;&nbsp;&nbsp; {{msg.gender}}</h1>
+          </table>
+      </div>
+<br>
+<br>
+<center>
+     
+          
+          
+                <legend class="border-bottom mb-4" style="color: #0f6674"> <b>Profile Info Updating:</b></legend>
+          
+                <A class="btn btn-primary" href="{%url 'updateprof' msg.id%}">Update MY PROFILE</A>
+          
+
+                <br>
+                <br>
+                     
+        </center>          
+
+{%endblock%}
+
+
+
+
+
+

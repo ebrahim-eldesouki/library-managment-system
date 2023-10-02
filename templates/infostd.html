@@ -1,0 +1,43 @@
+{%extends 'home.html'%}
+{%block tit%}
+information
+{%endblock%}
+{%block content%}
+<section>
+    <CENTER>
+                <h1> STUDENT DETAILS</h1>
+    </CENTER>
+ <center>
+
+
+  <table  border="0" width="50%">
+    <tr>
+       <th><h2>name:</h2> </th>
+       <td><h2>{{msg.username}}</h2></td>
+
+    </tr>
+    <tr>
+        <th><h2>age:</h2></th>
+        <td><h2>{{msg.age}}</h2></td>
+ 
+    </tr>
+    <tr>
+        <th><h2>gender:</h2></th>
+        <td><h2>{{msg.gender}}</h2></td>
+ 
+    </tr>
+    <tr>
+        <th><h2>email:</h2></th>
+        <td><h2>{{msg.email}}</h2></td>
+ 
+    </tr>
+
+
+
+
+
+  </table>
+</center>
+
+</section>
+{%endblock%}

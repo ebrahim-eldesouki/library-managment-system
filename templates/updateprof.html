@@ -1,0 +1,22 @@
+
+{%extends 'home.html'%}
+{%block tit%}
+update prof
+{%endblock%}
+{%block content%}
+
+<section>
+  <center>
+    
+       <form method="POST">
+         {%csrf_token%}
+         <div class="form-outline mb-4">
+          {{form}}
+           <input  class="form-field" id="form-submit" type="submit" value="update"/>
+</div>
+        </form>
+    </div>
+  </center>
+</section>
+
+{%endblock%}

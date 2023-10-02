@@ -1,0 +1,47 @@
+{%extends 'home.html'%}
+{%block tit%}
+my books
+{%endblock%}
+{%block content%}
+<section>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">name</th>
+        <th scope="col">id</th>
+        <th scope="col">num papers</th>
+        <th scope="col">type</th>
+        <th scope="col">deadline</th>
+        <th scope="col">action</th>
+      </tr>
+      {%for u in my%}
+    </thead>
+    <tr>
+      <td>
+          {{u.name}}
+      </td>
+      <td>
+          {{u.id}}
+      </td>
+      <td>
+          {{u.num_papers}}
+      </td>
+      <td>
+          {{u.type}}
+      </td>
+      <td>
+         {{u.deadline}}
+      </td>
+      <td>
+         <a href="{%url 'ret' u.id%}">return</a>
+      </td>
+  </tr>
+ 
+{%endfor%}
+  </table>
+</section>         
+
+
+ <br>
+ <br>
+{%endblock%}

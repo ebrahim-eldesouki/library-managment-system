@@ -1,0 +1,22 @@
+
+{%extends 'home.html'%}
+{%block tit%}
+add book
+{%endblock%}
+{%block content%}
+
+<section>
+  <center>
+    <div class="form-field">
+       <form method="POST">
+         {%csrf_token%}
+
+          {{form}}
+           <input class="form-field" id="form-submit"  type="submit" value='add'/>
+
+        </form>
+    </div>
+  </center>
+</section>
+
+{%endblock%}

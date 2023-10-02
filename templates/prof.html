@@ -1,0 +1,52 @@
+{%extends 'home.html'%}
+{%block tit%}
+profile
+{%endblock%}
+
+{%block content%}
+<section>
+    <center>
+     <table border="0" width="50%" CLASS="feature-thumb">
+   
+        <tr>
+            <th><h1>ID</h1></th>
+            
+        </tr>
+        {%for u in user%}
+            <tr>
+                <td>
+                    <h1>{{u.id}}</h1>
+                </td>
+            </tr>
+                <th>
+                   <h1>admin name</h1> 
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <h1>{{u.username}}</h1>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <h1>passowrd</h1>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <h1>{{u.password}}</h1>
+                </td>
+           
+                <td>
+                    <h1><a href="{%url 'updatepass' u.id%}">Update</a></h1>
+                    
+                </td>
+            </tr>
+    
+    
+       {%endfor%}
+     </table>
+    </center>
+</section>
+{%endblock%}
+     
